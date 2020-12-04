@@ -64,6 +64,13 @@ export default {
 </script>
 
 <style scoped>
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
 .main {
   width: 100vw;
   height: 100vh;
@@ -72,19 +79,10 @@ export default {
   justify-content: center;
 }
 
-a {
-  text-decoration: none;
-  color: #007ee6;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
 .login-box {
   margin: 0 auto;
   max-width: 600px;
-  height: 700px;
+  max-height: 700px;
 }
 
 .login-box .icon-box {
@@ -121,5 +119,14 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: #007ee6;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 </style>
