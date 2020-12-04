@@ -1,5 +1,9 @@
 <template>
-  <div id="app">
-    <router-view />
-  </div>
+  <q-layout view="lHh Lpr lFf">
+    <router-view> </router-view>
+  </q-layout>
 </template>
+
+<script>
+export default {};
+</script>

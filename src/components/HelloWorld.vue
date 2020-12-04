@@ -7,10 +7,10 @@
   </div>
 </template>
 
+<style></style>
+
 <script>
 export default {
-  name: "Dashboard",
+  name: "HelloWorld",
 };
 </script>
-
-<style scoped></style>
