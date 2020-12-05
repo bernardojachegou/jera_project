@@ -36,6 +36,31 @@
 
         <q-space />
 
+        <q-btn class="menu-button" color="secondary" label="Menu">
+          <q-menu auto-close>
+            <q-list style="min-width: 100px">
+              <q-item clickable>
+                <q-item-section>Catálogo</q-item-section>
+              </q-item>
+              <q-item clickable>
+                <q-item-section>Minha lista</q-item-section>
+              </q-item>
+              <q-separator />
+              <q-item clickable>
+                <q-item-section>Trocar perfil</q-item-section>
+              </q-item>
+              <q-separator />
+              <q-item clickable>
+                <q-item-section>Configurações</q-item-section>
+              </q-item>
+              <q-separator />
+              <q-item clickable>
+                <q-item-section>Logout</q-item-section>
+              </q-item>
+            </q-list>
+          </q-menu>
+        </q-btn>
+
         <div class="q-gutter-sm row items-center no-wrap">
           <q-btn round flat>
             <q-avatar size="26px">
@@ -150,6 +175,11 @@ export default {
   box-sizing: border-box;
 }
 
+.menu-button {
+  min-width: 100px;
+  margin: 0 12px;
+}
+
 .search-bar {
   min-width: 400px;
 }
@@ -158,15 +188,20 @@ export default {
   padding-top: 64px;
 }
 
-.movies-gallery {
-  display: flex;
-}
-
-.dash-sections {
+.dash-box .dash-sections {
   margin: 12px;
 }
 
-.movie-card {
+.dash-sections legend {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.dash-sections .movies-gallery {
+  display: flex;
+}
+
+.movies-gallery .movie-card {
   width: 300px;
   margin: 12px;
 }
