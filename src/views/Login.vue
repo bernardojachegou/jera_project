@@ -4,9 +4,11 @@
       <div class="icon-box">
         <h1>My Favorite Movies</h1>
         <q-icon name="theaters" size="64px" />
+        <h2>Login</h2>
       </div>
       <q-input
         class="login-input"
+        color="secondary"
         square
         filled
         v-model="text"
@@ -16,6 +18,7 @@
 
       <q-input
         class="login-input"
+        color="secondary"
         v-model="password"
         label="Senha"
         filled
@@ -34,17 +37,31 @@
           class="enter-button"
           unelevated
           rounded
-          color="primary"
+          color="secondary"
           label="Entrar"
         />
       </div>
 
       <div class="options">
         <div class="create-account">
-          <span>Não tem conta? <a href="">Cadastra-se</a></span>
+          <span
+            >Não tem conta?
+            <a
+              ><router-link :to="{ name: 'Register' }"
+                >Cadastra-se</router-link
+              ></a
+            >
+          </span>
         </div>
         <div class="reset-password">
-          <span>Esqueceu sua senha? <a href="">Recuperar</a></span>
+          <span
+            >Esqueceu sua senha?
+            <a
+              ><router-link :to="{ name: 'RecoveryPassword' }"
+                >Recuperar</router-link
+              ></a
+            ></span
+          >
         </div>
       </div>
     </div>
@@ -77,6 +94,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #f5f5f5;
 }
 
 .login-box {
@@ -98,6 +116,14 @@ export default {
   font-weight: bold;
 }
 
+.login-box .icon-box h2 {
+  font-size: 24px;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 12px;
+  text-transform: uppercase;
+}
+
 .login-box .login-input {
   margin: 24px 0;
   width: 350px;
@@ -111,7 +137,7 @@ export default {
 }
 
 .enter-button {
-  width: 300px;
+  width: 250px;
 }
 
 .options {
@@ -123,7 +149,7 @@ export default {
 
 a {
   text-decoration: none;
-  color: #007ee6;
+  color: #26a69a;
 }
 
 a:hover {
