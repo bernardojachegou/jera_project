@@ -81,13 +81,6 @@ export default {
 </script>
 
 <style scoped>
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  box-sizing: border-box;
-}
-
 .main {
   width: 100vw;
   height: 100vh;

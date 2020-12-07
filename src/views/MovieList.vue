@@ -40,22 +40,40 @@
           <q-menu auto-close>
             <q-list style="min-width: 100px">
               <q-item clickable>
-                <q-item-section>Catálogo</q-item-section>
+                <q-item-section>
+                  <router-link :to="{ name: 'MovieList' }"
+                    >Catálogo</router-link
+                  >
+                </q-item-section>
               </q-item>
               <q-separator />
               <q-item clickable>
-                <q-item-section>Minha lista</q-item-section>
+                <q-item-section>
+                  <router-link :to="{ name: 'Dashboard' }"
+                    >Minha lista</router-link
+                  >
+                </q-item-section>
               </q-item>
               <q-item clickable>
-                <q-item-section>Favoritos</q-item-section>
+                <q-item-section>
+                  <router-link :to="{ name: 'Dashboard' }"
+                    >Minha lista</router-link
+                  >
+                </q-item-section>
               </q-item>
               <q-separator />
               <q-item clickable>
-                <q-item-section>Trocar perfil</q-item-section>
+                <q-item-section
+                  ><router-link :to="{ name: 'Profiles' }"
+                    >Trocar perfil</router-link
+                  ></q-item-section
+                >
               </q-item>
               <q-separator />
               <q-item clickable>
-                <q-item-section>Sair</q-item-section>
+                <q-item-section>
+                  <router-link :to="{ name: 'Login' }">Sair</router-link>
+                </q-item-section>
               </q-item>
             </q-list>
           </q-menu>
@@ -73,27 +91,11 @@
     </q-header>
     <div class="dash-box">
       <section class="dash-sections">
-        <legend>Sugestões</legend>
+        <legend>Lista de filmes</legend>
         <div class="movies-gallery">
           <q-card class="my-card movie-card">
             <q-card-section horizontal>
-              <q-img src="https://cdn.quasar.dev/img/parallax2.jpg" />
-
-              <q-card-actions vertical class="justify-around">
-                <q-btn flat round color="dark" icon="live_tv" />
-                <q-btn flat round color="red" icon="favorite" />
-                <q-btn flat round color="secondary" icon="share" />
-              </q-card-actions>
-            </q-card-section>
-          </q-card>
-        </div>
-
-        <legend>Minha lista</legend>
-
-        <div class="movies-gallery">
-          <q-card class="my-card movie-card">
-            <q-card-section horizontal>
-              <q-img src="https://cdn.quasar.dev/img/parallax2.jpg" />
+              <q-img src="https://cdn.quasar.dev/img/mountains.jpg" />
 
               <q-card-actions vertical class="justify-around">
                 <q-btn flat round color="dark" icon="live_tv" />
@@ -109,12 +111,12 @@
 </template>
 
 <script>
+import client from "../services/http";
+
 export default {
-  name: "Dashboard",
-  data() {
-    return {
-      search: "",
-    };
+  name: "MovieList",
+  created() {
+    client.get("/").then((value) => console.log(value));
   },
 };
 </script>

@@ -79,14 +79,6 @@ export default {
 </script>
 
 <style scoped>
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-}
-
 .main {
   width: 100vw;
   height: 100vh;
