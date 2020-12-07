@@ -39,6 +39,22 @@
       <q-input
         class="register-input"
         color="secondary"
+        v-model="password"
+        label="Repita a senha"
+        filled
+        :type="isPwd ? 'password' : 'text'"
+        ><template v-slot:append>
+          <q-icon
+            :name="isPwd ? 'visibility_off' : 'visibility'"
+            class="cursor-pointer"
+            @click="isPwd = !isPwd"
+          />
+        </template>
+      </q-input>
+
+      <q-input
+        class="register-input"
+        color="secondary"
         square
         filled
         v-model="text"
@@ -91,7 +107,6 @@ export default {
 .register-box {
   margin: 0 auto;
   max-width: 600px;
-  max-height: 700px;
 }
 
 .register-box .icon-box {

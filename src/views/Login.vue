@@ -57,7 +57,7 @@
           <span
             >Esqueceu sua senha?
             <a
-              ><router-link :to="{ name: 'RecoveryPassword' }"
+              ><router-link :to="{ name: 'AccountRecovery' }"
                 >Recuperar</router-link
               ></a
             ></span
@@ -87,13 +87,11 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f5f5f5;
 }
 
 .login-box {
   margin: 0 auto;
   max-width: 600px;
-  max-height: 700px;
 }
 
 .login-box .icon-box {
