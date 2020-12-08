@@ -85,11 +85,11 @@ export default {
   justify-content: center;
   margin: 12px;
   cursor: pointer;
-  border: 2px solid #26a69a;
+  border: 3px solid #26a69a;
 }
 
 .centered-box .avatar-box:hover {
-  border: 2px solid white;
+  border: 3px solid white;
   border-radius: 8px;
 }
 

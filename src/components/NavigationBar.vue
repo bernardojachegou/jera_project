@@ -6,10 +6,12 @@
         shrink
         class="row items-center no-wrap"
       >
-        <span class="q-ml-sm">
-          <q-icon name="theaters" size="64px" />
-          My Favorite Movies</span
-        >
+        <router-link :to="{ name: 'Dashboard' }">
+          <span class="q-ml-sm logo-box">
+            <q-icon name="theaters" size="64px" color="black" />My Favorite
+            Movies</span
+          >
+        </router-link>
       </q-toolbar-title>
 
       <q-space />
@@ -38,38 +40,47 @@
       <q-btn class="menu-button" color="secondary" label="Menu">
         <q-menu auto-close>
           <q-list style="min-width: 100px">
-            <q-item clickable>
-              <q-item-section>
-                <router-link :to="{ name: 'MovieList' }">Catálogo</router-link>
-              </q-item-section>
-            </q-item>
+            <router-link :to="{ name: 'Dashboard' }">
+              <q-item clickable>
+                <q-item-section class="item-section">
+                  Minha lista
+                </q-item-section>
+              </q-item>
+            </router-link>
+
             <q-separator />
-            <q-item clickable>
-              <q-item-section>
-                <router-link :to="{ name: 'Dashboard' }"
-                  >Minha lista</router-link
+
+            <router-link :to="{ name: 'MovieList' }">
+              <q-item clickable>
+                <q-item-section class="item-section"> Catálogo </q-item-section>
+              </q-item>
+            </router-link>
+
+            <router-link :to="{ name: 'Dashboard' }">
+              <q-item clickable>
+                <q-item-section class="item-section">
+                  Favoritos
+                </q-item-section>
+              </q-item>
+            </router-link>
+
+            <q-separator />
+
+            <router-link :to="{ name: 'Profiles' }">
+              <q-item clickable>
+                <q-item-section class="item-section"
+                  >Trocar perfil</q-item-section
                 >
-              </q-item-section>
-            </q-item>
-            <q-item clickable>
-              <q-item-section>
-                <router-link :to="{ name: 'Dashboard' }">Favoritos</router-link>
-              </q-item-section>
-            </q-item>
+              </q-item>
+            </router-link>
+
             <q-separator />
-            <q-item clickable>
-              <q-item-section
-                ><router-link :to="{ name: 'Profiles' }"
-                  >Trocar perfil</router-link
-                ></q-item-section
-              >
-            </q-item>
-            <q-separator />
-            <q-item clickable>
-              <q-item-section>
-                <router-link :to="{ name: 'Login' }">Sair</router-link>
-              </q-item-section>
-            </q-item>
+
+            <router-link :to="{ name: 'Login' }">
+              <q-item clickable>
+                <q-item-section class="item-section"> Sair </q-item-section>
+              </q-item>
+            </router-link>
           </q-list>
         </q-menu>
       </q-btn>
@@ -91,6 +102,11 @@
   padding: 8px 24px;
 }
 
+.navigation-bar .logo-box {
+  cursor: pointer;
+  color: black;
+}
+
 .search-bar {
   min-width: 400px;
 }
@@ -98,6 +114,11 @@
 .menu-button {
   min-width: 150px;
   margin-right: 24px;
+}
+
+.item-section {
+  color: black;
+  font-weight: 400;
 }
 </style>
 
